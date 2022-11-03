@@ -19,15 +19,15 @@ generate them for you. `Faker` is used by `factory_boy` to produce
 fake data, like names or addresses, to populate these fixtures.
 
 The misuse of `factory_boy` and `Faker` is to create a "factory" not
-for producing test fixtures, but for producing a "novel"--a text of at
+for producing test fixtures, but for producing a "novel"—a text of at
 least 50,000 words. This code creates
 [factories](a_novel_factory/factories.py) for Novel, Chapters,
 Paragraphs, Sentences, Characters, and Titles, from bare
 specifications called [objects](a_novel_factory/objects.py). (In other
 contexts, the objects would be the actual data models used by the
-application under test.)  The factories at the bottom
-level--Sentences, Titles, and Characters--use `Faker` to generate
-random text; Characters come from the [person
+application under test.)  The factories at the bottom level—Sentences,
+Titles, and Characters—use `Faker` to generate random text; Characters
+come from the [person
 Provider](https://faker.readthedocs.io/en/master/providers/faker.providers.person.html),
 Titles from the [lorem
 Provider](https://faker.readthedocs.io/en/master/providers/faker.providers.lorem.html),
