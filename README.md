@@ -31,7 +31,9 @@ come from the [person
 Provider](https://faker.readthedocs.io/en/master/providers/faker.providers.person.html),
 Titles from the [lorem
 Provider](https://faker.readthedocs.io/en/master/providers/faker.providers.lorem.html),
-and Sentences use a combination of Characters and the lorem Provider.
+and Sentences come from [a custom
+Provider](a_novel_factory/providers.py) that uses a combination of
+Characters and the lorem Provider.
 
 With any luck, future versions will enhance the output further,
 possibly using [corpora](https://github.com/dariusk/corpora) as raw
