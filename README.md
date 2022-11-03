@@ -19,18 +19,21 @@ generate them for you. `Faker` is used by `factory_boy` to produce
 fake data, like names or addresses, to populate these fixtures.
 
 The misuse of `factory_boy` and `Faker` is to create a "factory" not
-for producing test fixtures, but for producing a "novel"---a text of
-at least 50,000 words. This code creates
+for producing test fixtures, but for producing a "novel"--a text of at
+least 50,000 words. This code creates
 [factories](a_novel_factory/factories.py) for Novel, Chapters,
-Paragraphs, Sentences, and Titles, from bare specifications called
-[objects](a_novel_factory/objects.py). (In other contexts, the objects
-would be the actual data models used by the application under test.)
-In the initial version of this code, the factories at the bottom
-level---Sentences and Titles---use `Faker`'s [lorem
-Provider](https://faker.readthedocs.io/en/master/providers/faker.providers.lorem.html)
-to generate random text. With any luck, future versions will enhance
-the output with a [Dynamic
-Provider](https://faker.readthedocs.io/en/master/#how-to-create-a-dynamic-provider),
+Paragraphs, Sentences, Characters, and Titles, from bare
+specifications called [objects](a_novel_factory/objects.py). (In other
+contexts, the objects would be the actual data models used by the
+application under test.)  The factories at the bottom
+level--Sentences, Titles, and Characters--use `Faker` to generate
+random text; Characters come from the [person
+Provider](https://faker.readthedocs.io/en/master/providers/faker.providers.person.html),
+Titles from the [lorem
+Provider](https://faker.readthedocs.io/en/master/providers/faker.providers.lorem.html),
+and Sentences use a combination of Characters and the lorem Provider.
+
+With any luck, future versions will enhance the output further,
 possibly using [corpora](https://github.com/dariusk/corpora) as raw
 material.
 
@@ -38,9 +41,12 @@ At the moment, the output is entirely random. Another possible
 enhancement is to set the random seed, so that particular outputs are
 repeatable.
 
-A [sample output](output/0.1.0-place_improve.md) in Markdown format is
-in this repo, as well as [PDF](output/0.1.0-place_improve.pdf) and
-[epub](output/0.1.0-place_improve.epub) versions.
+A [sample output](output/0.2.0-its_already_magazine_tree.md) in
+Markdown format is in this repo, as well as
+[PDF](output/0.2.0-its_already_magazine_tree.pdf) and
+[epub](output/0.2.0-its_already_magazine_tree.epub) versions. An
+earlier version's outputs are available in the [same
+directory](output/).
 
 Usage
 -----
