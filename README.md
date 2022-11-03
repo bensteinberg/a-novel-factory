@@ -1,9 +1,9 @@
 a-novel-factory
 ===============
 
-This is an entry for [NaNoGenMo
-2022](https://github.com/NaNoGenMo/2022). It is an experiment in the
-(mis)use of
+This is [an entry](https://github.com/NaNoGenMo/2022/issues/14) for
+[NaNoGenMo 2022](https://github.com/NaNoGenMo/2022). It is an
+experiment in the (mis)use of
 [factory_boy](https://factoryboy.readthedocs.io/en/stable/) and
 [Faker](https://faker.readthedocs.io/en/master/), Python packages used
 to create test fixtures.
