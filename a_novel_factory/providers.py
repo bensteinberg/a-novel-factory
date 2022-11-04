@@ -1,17 +1,10 @@
 import random
-import json
 from faker import Faker
 from faker.providers import BaseProvider
+from a_novel_factory.corpora import Corpora
 
 fake = Faker()
-with open('corpora/data/humans/atus_activities.json') as f:
-    activities = [
-        example for examples in [
-            c['examples']
-            for c in json.load(f)['categories']
-            if 'examples' in c
-        ] for example in examples
-    ]
+corpora = Corpora()
 
 
 class CustomSentenceProvider(BaseProvider):
@@ -26,7 +19,7 @@ class CustomSentenceProvider(BaseProvider):
         elif random_value < 0.8:
             # one-character sentences
             c = random.choice(characters)
-            a = random.choice(activities).replace('hh', 'household')
+            a = random.choice(corpora.activities)
             return random.choice([
                 f'{c.name} said "{text}"',
                 f'{c.first} thought "{text}"',
