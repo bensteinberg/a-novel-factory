@@ -56,6 +56,7 @@ Poetry](https://python-poetry.org/docs/#installation), optionally
 ```
 cd a-novel-factory
 git submodule init
+git submodule update
 poetry install
 poetry run new_novel
 ```
