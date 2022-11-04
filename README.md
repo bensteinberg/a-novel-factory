@@ -37,9 +37,8 @@ Characters, the lorem Provider, and American Time Use Survey
 activities from [corpora](https://github.com/dariusk/corpora),
 included here as a git submodule.
 
-At the moment, the output is entirely random. Another possible
-enhancement is to set the random seed, so that particular outputs are
-repeatable.
+At the moment, the output is entirely random. A possible enhancement
+is to set the random seed, so that particular outputs are repeatable.
 
 A [sample output](output/0.2.1-show_money_field.md) in
 Markdown format is in this repo, as well as
