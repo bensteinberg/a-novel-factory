@@ -33,17 +33,18 @@ Titles from the [lorem
 Provider](https://faker.readthedocs.io/en/master/providers/faker.providers.lorem.html),
 and Sentences come from [a custom
 Provider](a_novel_factory/providers.py) that uses a combination of
-Characters, the lorem Provider, and American Time Use Survey
-activities from [corpora](https://github.com/dariusk/corpora),
-included here as a git submodule.
+Characters, the lorem Provider, and, from
+[corpora](https://github.com/dariusk/corpora), included here as a git
+submodule, American Time Use Survey activities and Canadian
+municipalities.
 
 At the moment, the output is entirely random. A possible enhancement
 is to set the random seed, so that particular outputs are repeatable.
 
-A [sample output](output/0.2.1-show_money_field.md) in
+A [sample output](output/0.2.2-game_go_rule.md) in
 Markdown format is in this repo, as well as
-[PDF](output/0.2.1-show_money_field.pdf) and
-[epub](output/0.2.1-show_money_field.epub) versions. Earlier
+[PDF](output/0.2.2-game_go_rule.pdf) and
+[epub](output/0.2.2-game_go_rule.epub) versions. Earlier
 versions' outputs are available in the [same directory](output/).
 
 Usage
