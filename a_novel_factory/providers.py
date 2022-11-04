@@ -1,8 +1,18 @@
 import random
+import json
 from faker import Faker
 from faker.providers import BaseProvider
 
 fake = Faker()
+with open('corpora/data/humans/atus_activities.json') as f:
+    atus_activities = json.load(f)
+    activities = [
+        example for examples in [
+            c['examples']
+            for c in atus_activities['categories']
+            if 'examples' in c
+        ] for example in examples
+    ]
 
 
 class CustomSentenceProvider(BaseProvider):
@@ -17,6 +27,7 @@ class CustomSentenceProvider(BaseProvider):
         elif random_value < 0.8:
             # one-character sentences
             c = random.choice(characters)
+            a = random.choice(activities).replace('hh', 'household')
             return random.choice([
                 f'{c.name} said "{text}"',
                 f'{c.first} thought "{text}"',
@@ -25,6 +36,7 @@ class CustomSentenceProvider(BaseProvider):
                 f'{c.name} took a cab.',
                 f"{c.prefix} {c.last}'s shoes were too tight.",
                 f'{c.name} sang, "{text}"',
+                f'{c.first} was {a}.'
             ])
         else:
             # two-character sentences

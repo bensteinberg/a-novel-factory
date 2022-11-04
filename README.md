@@ -33,22 +33,19 @@ Titles from the [lorem
 Provider](https://faker.readthedocs.io/en/master/providers/faker.providers.lorem.html),
 and Sentences come from [a custom
 Provider](a_novel_factory/providers.py) that uses a combination of
-Characters and the lorem Provider.
-
-With any luck, future versions will enhance the output further,
-possibly using [corpora](https://github.com/dariusk/corpora) as raw
-material.
+Characters, the lorem Provider, and American Time Use Survey
+activities from [corpora](https://github.com/dariusk/corpora),
+included here as a git submodule.
 
 At the moment, the output is entirely random. Another possible
 enhancement is to set the random seed, so that particular outputs are
 repeatable.
 
-A [sample output](output/0.2.0-its_already_magazine_tree.md) in
+A [sample output](output/0.2.1-show_money_field.md) in
 Markdown format is in this repo, as well as
-[PDF](output/0.2.0-its_already_magazine_tree.pdf) and
-[epub](output/0.2.0-its_already_magazine_tree.epub) versions. An
-earlier version's outputs are available in the [same
-directory](output/).
+[PDF](output/0.2.1-show_money_field.pdf) and
+[epub](output/0.2.1-show_money_field.epub) versions. Earlier
+versions' outputs are available in the [same directory](output/).
 
 Usage
 -----
