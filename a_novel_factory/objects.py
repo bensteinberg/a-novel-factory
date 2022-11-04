@@ -17,9 +17,9 @@ class Novel:
             f'creator: {__package__} {__version__}\n'
             '---\n'
         )
-        body = f'# {title.upper()} #\n\n' + '\n\n\n'.join(
-            [str(c) for c in self.chapters]
-        )
+
+        body = '\n\n\n'.join([str(c) for c in self.chapters])
+
         return frontmatter + body
 
 

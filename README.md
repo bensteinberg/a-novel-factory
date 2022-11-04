@@ -60,14 +60,12 @@ poetry install
 poetry run new_novel
 ```
 
-This will generate Markdown, PDF, and epub files, using the novel's
-title as filename. `poetry run new_novel --no-title-from-text` will
-generate `a_novel.[md|pdf|epub]`. In the absence of Pandoc, only
-Markdown will be produced. (Note that on some Macs, with Pandoc
-installed, if you get an error like `pandoc: pdflatex: createProcess:
-posix_spawnp: illegal operation (Inappropriate ioctl for device)`, you
-may need to install or reinstall `pdflatex`, possibly with `brew
-reinstall --cask basictex`.)
+This will generate Markdown, PDF, and epub files. In the absence of
+Pandoc, only Markdown will be produced. (Note that on some Macs, with
+Pandoc installed, if you get an error like `pandoc: pdflatex:
+createProcess: posix_spawnp: illegal operation (Inappropriate ioctl
+for device)`, you may need to install or reinstall `pdflatex`,
+possibly with `brew reinstall --cask basictex`.)
 
 Credit
 ------

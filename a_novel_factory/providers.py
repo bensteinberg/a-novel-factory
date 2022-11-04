@@ -5,11 +5,10 @@ from faker.providers import BaseProvider
 
 fake = Faker()
 with open('corpora/data/humans/atus_activities.json') as f:
-    atus_activities = json.load(f)
     activities = [
         example for examples in [
             c['examples']
-            for c in atus_activities['categories']
+            for c in json.load(f)['categories']
             if 'examples' in c
         ] for example in examples
     ]

@@ -8,21 +8,15 @@ __version__ = metadata.version(__package__)
 
 
 @click.command()
-@click.option('--title-from-text/--no-title-from-text', default=True,
-              help='Filename from version and title by default, '
-              'or `a_novel.md`')
 @click.option('--output-dir', '-o', default='./output')
-def new_novel(title_from_text, output_dir):
+def new_novel(output_dir):
     """
     Writes a generated novel to a Markdown file. Outputs PDF and epub files
     if pandoc is installed.
     """
     novel = factories.NovelFactory()
 
-    if title_from_text:
-        title = f'{__version__}-{novel.title}'.replace(' ', '_').lower()
-    else:
-        title = 'a_novel'
+    title = f'{__version__}-{novel.title}'.replace(' ', '_').lower()
 
     text = f'{novel}'
     with open(f'{output_dir}/{title}.md', 'w') as md:
