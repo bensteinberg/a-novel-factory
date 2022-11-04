@@ -30,3 +30,7 @@ class Corpora:
             m['name'] for m in municipalities if m['province'] == province
         ]
         self.places = random.sample(places, k=random.randint(1, len(places)))
+
+        # get all the objects
+        with open(f'{path}/objects/objects.json') as f:
+            self.objects = json.load(f)['objects']

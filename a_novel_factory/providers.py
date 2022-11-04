@@ -13,6 +13,8 @@ class CustomSentenceProvider(BaseProvider):
         text = fake.sentence()
         a = random.choice(corpora.activities)
         p = random.choice(corpora.places)
+        o = random.choice(corpora.objects)
+        an = 'an' if o[0] in 'aeiouAEIOU' else 'a'
 
         random_value = random.random()
 
@@ -31,6 +33,7 @@ class CustomSentenceProvider(BaseProvider):
                 f'{c.name} sang, "{text}"',
                 f'{c.first} was {a}.',
                 f'{c.first} asked, "{text.rstrip(".")}?"',
+                f'{c.first} was looking for {an} {o}.',
             ])
         else:
             # two-character sentences
@@ -43,4 +46,5 @@ class CustomSentenceProvider(BaseProvider):
                 f'"{c1.prefix} {c1.last}, I presume," said {c2.name}.',
                 f'{c1.first} and {c2.first} were {a}.',
                 f'{c1.first} and {c2.first} moved to {p}.',
+                f'{c1.first} handed {c2.first} {an} {o}.',
             ])
