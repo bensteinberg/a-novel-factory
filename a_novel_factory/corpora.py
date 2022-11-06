@@ -31,6 +31,15 @@ class Corpora:
         ]
         self.places = random.sample(places, k=random.randint(1, len(places)))
 
-        # get all the objects
+        # get all the objects, except those that are plural
         with open(f'{path}/objects/objects.json') as f:
-            self.objects = json.load(f)['objects']
+            self.objects = [o for o
+                            in json.load(f)['objects']
+                            if o[-1] != 's' or ' ' in o]
+
+        # get most of the "adjectives"; a number of these are
+        # not really adjectives...
+        with open(f'{path}/words/adjs.json') as f:
+            self.adjectives = [a for a
+                               in json.load(f)['adjs']
+                               if not a[0].isupper()]

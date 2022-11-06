@@ -36,15 +36,15 @@ Provider](a_novel_factory/providers.py) that uses a combination of
 Characters, the lorem Provider, and, from
 [corpora](https://github.com/dariusk/corpora), included here as a git
 submodule, American Time Use Survey activities, Canadian
-municipalities, and household objects.
+municipalities, household objects, and adjectives.
 
 At the moment, the output is entirely random. A possible enhancement
 is to set the random seed, so that particular outputs are repeatable.
 
-A [sample output](output/0.2.3-usually_score_begin.md) in
+A [sample output](output/0.2.4-audience_report.md) in
 Markdown format is in this repo, as well as
-[PDF](output/0.2.3-usually_score_begin.pdf) and
-[epub](output/0.2.3-usually_score_begin.epub) versions. Earlier
+[PDF](output/0.2.4-audience_report.pdf) and
+[epub](output/0.2.4-audience_report.epub) versions. Earlier
 versions' outputs are available in the [same directory](output/).
 
 Usage
@@ -52,7 +52,9 @@ Usage
 
 Clone this repo, [install
 Poetry](https://python-poetry.org/docs/#installation), optionally
-[install Pandoc](https://pandoc.org/installing.html), then run
+[install Pandoc](https://pandoc.org/installing.html) and `pdflatex`
+(see instructions for your OS at the pandoc installation page), then
+run
 
 ```
 cd a-novel-factory
