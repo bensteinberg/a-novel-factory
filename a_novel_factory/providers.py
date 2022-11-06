@@ -14,7 +14,7 @@ class CustomSentenceProvider(BaseProvider):
         a = random.choice(corpora.activities)
         p = random.choice(corpora.places)
         o = random.choice(corpora.objects)
-        an = 'an' if o[0] in 'aeiouAEIOU' else 'a'
+        an = 'an' if o[0].lower() in 'aeiou' else 'a'
         adj = random.choice(corpora.adjectives)
 
         random_value = random.random()
