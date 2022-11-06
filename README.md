@@ -53,7 +53,7 @@ Usage
 Clone this repo, [install
 Poetry](https://python-poetry.org/docs/#installation), optionally
 [install Pandoc](https://pandoc.org/installing.html) and `pdflatex`
-(see instructions for your OS at the pandoc installation page), then
+(see instructions for your OS at the Pandoc installation page), then
 run
 
 ```
