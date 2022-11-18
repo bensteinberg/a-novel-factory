@@ -2,19 +2,24 @@ import click
 import humanize
 import subprocess
 from importlib import metadata
-from a_novel_factory import factories
 
 __version__ = metadata.version(__package__)
 
 
 @click.command()
 @click.option('--output-dir', '-o', default='./output')
-def new_novel(output_dir):
+@click.option('--seed', help='Random seed')
+def new_novel(output_dir, seed):
     """
     Writes a generated novel to a Markdown file. Outputs PDF and epub files
     if pandoc is installed.
     """
-    novel = factories.NovelFactory()
+    if seed:
+        from a_novel_factory.util import set_seed
+        set_seed(seed)
+
+    from a_novel_factory import factories
+    novel = factories.NovelFactory(seed=seed)
 
     title = f'{__version__}-{novel.title}'.replace(' ', '_').lower()
 

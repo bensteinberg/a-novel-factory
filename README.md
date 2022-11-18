@@ -38,14 +38,17 @@ Characters, the lorem Provider, and, from
 submodule, American Time Use Survey activities, Canadian
 municipalities, household objects, and adjectives.
 
-At the moment, the output is entirely random. A possible enhancement
-is to set the random seed, so that particular outputs are repeatable.
+The output is entirely random, unless you add a `--seed` option. Then
+the output is random but repeatable :) and the seed used is recorded
+in the frontmatter of the Markdown output. (A further development
+could be to record the seeds used in a wholly-random run of the
+program, which can probably not be reduced to a simple string of
+text.)
 
-A [sample output](output/0.2.4-audience_report.md) in
-Markdown format is in this repo, as well as
-[PDF](output/0.2.4-audience_report.pdf) and
-[epub](output/0.2.4-audience_report.epub) versions. Earlier
-versions' outputs are available in the [same directory](output/).
+A [sample output](output/0.3.0-role_task.md) in Markdown format is in
+this repo, as well as [PDF](output/0.3.0-role_task.pdf) and
+[epub](output/0.3.0-role_task.epub) versions. Earlier versions'
+outputs are available in the [same directory](output/).
 
 Usage
 -----

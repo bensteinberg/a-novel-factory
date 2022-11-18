@@ -4,18 +4,21 @@ __version__ = metadata.version(__package__)
 
 
 class Novel:
-    def __init__(self, title, chapters, characters):
+    def __init__(self, title, chapters, characters, seed=None):
         self.title = title
         self.chapters = chapters
         self.characters = characters
+        self.seed = seed
 
     def __str__(self):
         title = f'{self.title}'
+        seed = f'seed: {self.seed}\n' if self.seed else ''
+        delim = '---\n'
         frontmatter = (
-            '---\n'
+            f'{delim}'
             f'title: "{title}"\n'
             f'creator: {__package__} {__version__}\n'
-            '---\n'
+            f'{seed}{delim}'
         )
 
         body = '\n\n\n'.join([str(c) for c in self.chapters])

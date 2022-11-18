@@ -24,7 +24,7 @@ class Corpora:
         with open(f'{path}/geography/canadian_municipalities.json') as f:
             municipalities = json.load(f)['municipalities']
         province = random.choice(
-            list(set([m['province'] for m in municipalities]))
+            sorted(list(set([m['province'] for m in municipalities])))
         )
         places = [
             m['name'] for m in municipalities if m['province'] == province
